@@ -10,6 +10,10 @@
 /******************************************
 /* LAYOUT
 /*******************************************/
+body{
+  background-color: #f5dd90;
+}
+
 img{
   display: block;
   margin: 0 auto;
@@ -23,6 +27,7 @@ main{
   display:flex;
   padding: 2rem;
   flex-direction: column;
+  background: #f5dd90;
 }
 
 main > h1{
@@ -38,10 +43,11 @@ button{
   font-size: 1.25rem;
   border: none;
   border-radius: 15px;
-  background-color: #586ba4;
   color: #fff;
   cursor: pointer;
   margin: 2rem auto 1rem;
+  --clay-background: #586ba4;
+--clay-border-radius: 10px;
 }
 
 main input {
@@ -54,6 +60,7 @@ main input {
   cursor: pointer;
   margin: 1rem auto;
 }
+
 
 
 
@@ -70,6 +77,30 @@ main input {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.letter{
+font-size: 2rem;
+padding: 1rem;
+margin:2rem 5px;
+color: #fff;
+width: 4rem;
+height: 4rem;
+text-align: center;
+
+--clay-background: #586ba4;
+--clay-border-radius: 10px;
+}
+
+.hide{
+  color:#586ba4
+}
+
+#wordPuzzle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 #answer{
