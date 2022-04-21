@@ -10,6 +10,9 @@
 /******************************************
 /* LAYOUT
 /*******************************************/
+html{
+  height: 100vh;
+}
 body{
   background-color: #f5dd90;
 }
@@ -106,4 +109,8 @@ text-align: center;
 #answer{
   width: 50%;
   margin: 0 auto;
+}
+
+#guess:hover{
+  --clay-background: #7486be;
 }
