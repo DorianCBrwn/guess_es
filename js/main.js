@@ -1,7 +1,3 @@
-getWord();
-document.getElementById("getWord").addEventListener("click", getWord);
-// document.querySelector("#guess").addEventListener("click", checkGuess(word));
-
 function getWord() {
   const url = "https://palabras-aleatorias-public-api.herokuapp.com/random";
   fetch(url)
@@ -51,6 +47,28 @@ const hideLetters = () => {
 };
 
 const checkGuess = (word) => {
-  let guess = document.querySelector("#guess").value.toLowerCase();
+  let guess = document.querySelector("input").value.toLowerCase();
+  console.log(`The guess is ${guess}`);
+  uncoverLetter();
   word === guess ? console.log("correct") : console.log("incorrect");
 };
+
+const uncoverLetter = () => {
+  let currLetterList = Array.from(document.querySelectorAll(".hide"));
+
+  if (currLetterList.some((ele) => ele.classList.contains("hide"))) {
+    currLetterList[
+      Math.floor(Math.random() * currLetterList.length)
+    ].classList.remove("hide");
+  } else {
+    console.log("There are no letters to uncover.");
+  }
+};
+
+let word = getWord();
+
+document.getElementById("getWord").addEventListener("click", getWord);
+
+document
+  .getElementById("guess")
+  .addEventListener("click", checkGuess.bind(this, word));
