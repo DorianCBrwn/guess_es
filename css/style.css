@@ -24,7 +24,8 @@ img{
 
 main{
   width: 100%;
-  max-width: 900px;
+  max-width: fit-content;
+  min-width: 600px;
   margin: 0 auto;
   margin-top: 15vh;
   display:flex;
@@ -51,6 +52,10 @@ button{
   margin: 2rem auto 1rem;
   --clay-background: #586ba4;
 --clay-border-radius: 10px;
+}
+
+button:hover{
+  --clay-background: #7486be;
 }
 
 main input {
@@ -109,8 +114,4 @@ text-align: center;
 #answer{
   width: 50%;
   margin: 0 auto;
-}
-
-#guess:hover{
-  --clay-background: #7486be;
 }
